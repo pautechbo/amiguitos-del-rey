@@ -1,0 +1,68 @@
+:host {
+  display: inline-flex;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  line-height: 1;
+}
+
+.logo__mark {
+  width: 46px;
+  height: 46px;
+  flex: none;
+  filter: drop-shadow(0 8px 14px rgba(255, 107, 91, 0.28));
+}
+
+.logo__mark svg {
+  width: 100%;
+  height: 100%;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.logo__name {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 1.28rem;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.logo__sub {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--coral);
+}
+
+.logo--light .logo__name {
+  color: #fff;
+}
+
+.logo--light .logo__sub {
+  color: var(--sun);
+}
+
+@media (max-width: 420px) {
+  .logo__mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .logo__name {
+    font-size: 1.12rem;
+  }
+
+  .logo__sub {
+    font-size: 0.78rem;
+  }
+}

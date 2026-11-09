@@ -1,0 +1,35 @@
+<section class="section day" id="dia">
+  <div class="container day__inner">
+    <div class="day__intro" appReveal>
+      <span class="eyebrow">Un día con nosotros</span>
+      <h2 class="section-title">Así se vive un día en <span class="highlight highlight--teal">Amiguitos</span></h2>
+      <p class="lead day__lead">
+        Rutinas predecibles que dan seguridad, con espacios de libertad para elegir, crear y
+        equivocarse. Esta es la jornada de un niño de Pre-kínder.
+      </p>
+
+      <div class="day__note">
+        <span class="icon-bubble icon-bubble--sky">
+          <app-icon name="clock" [size]="22" />
+        </span>
+        <div>
+          <strong>¿Necesitas más tiempo?</strong>
+          <p>Horario extendido hasta las 16:30 y talleres de 14:00 a 16:00.</p>
+        </div>
+      </div>
+    </div>
+
+    <ol class="day__list">
+      @for (moment of moments; track moment.time; let i = $index) {
+        <li class="day__item" appReveal [style.--reveal-delay]="i * 45 + 'ms'">
+          <span class="day__time">{{ moment.time }}</span>
+          <span class="day__marker" aria-hidden="true"></span>
+          <div class="day__body">
+            <h3>{{ moment.title }}</h3>
+            <p>{{ moment.text }}</p>
+          </div>
+        </li>
+      }
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,604 @@
+/* ============================================================
+   Amiguitos del Rey — tokens y estilos globales
+   ============================================================ */
+
+:root {
+  /* Paleta */
+  --cream: #fff7ee;
+  --cream-deep: #fdedda;
+  --white: #ffffff;
+  --ink: #2b2540;
+  --ink-soft: #5d5675;
+  --ink-faint: #8b85a0;
+
+  /* Siete colores de la identidad: rojo, morado, celeste, amarillo, azul, verde y verde agua */
+  --coral: #ef4b45; /* rojo */
+  --coral-soft: #ffd9d6;
+  --plum: #7a4bd6; /* morado */
+  --plum-soft: #e8ddff;
+  --sky: #55b9f3; /* celeste */
+  --sky-soft: #d8efff;
+  --sun: #ffc531; /* amarillo */
+  --sun-soft: #ffeab0;
+  --blue: #2f6fed; /* azul */
+  --blue-soft: #dce7ff;
+  --green: #1fa45c; /* verde */
+  --green-soft: #d6f2e1;
+  --teal: #0fb3a3; /* verde agua */
+  --teal-soft: #cff3ee;
+  --mint: #eaf6ef;
+  --lavender: #f3edff;
+
+  /* Variantes oscuras para texto sobre fondos claros (contraste AA) */
+  --coral-text: #b02a21;
+  --plum-text: #5a32a8;
+  --sky-text: #12628f;
+  --sun-text: #6f4d00;
+  --blue-text: #1a47a8;
+  --green-text: #0e5c33;
+  --teal-text: #086b62;
+
+  /* Formas */
+  --radius-sm: 14px;
+  --radius: 24px;
+  --radius-lg: 36px;
+  --radius-pill: 999px;
+
+  /* Sombras */
+  --shadow-sm: 0 6px 18px rgba(43, 37, 64, 0.06);
+  --shadow: 0 18px 44px rgba(43, 37, 64, 0.1);
+  --shadow-lg: 0 32px 72px rgba(43, 37, 64, 0.16);
+  --ring: 0 0 0 4px rgba(255, 197, 61, 0.45);
+
+  /* Tipografía */
+  --font-head: 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+
+  --header-h: 84px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--ink);
+  background-color: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--sun);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 3px solid var(--plum);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ------------------------------------------------------------
+   Layout
+   ------------------------------------------------------------ */
+
+.container {
+  width: min(1180px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+.container--narrow {
+  width: min(820px, 100% - 2.5rem);
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: clamp(4rem, 8vw, 7.5rem);
+}
+
+.section--white {
+  background: var(--white);
+}
+
+.section--cream {
+  background: var(--cream);
+}
+
+.section--mint {
+  background: var(--mint);
+}
+
+.section--lavender {
+  background: var(--lavender);
+}
+
+/* Franja arcoíris de la identidad */
+.rainbow-line {
+  background: linear-gradient(
+    90deg,
+    var(--coral) 0 14.28%,
+    var(--plum) 14.28% 28.56%,
+    var(--sky) 28.56% 42.84%,
+    var(--sun) 42.84% 57.12%,
+    var(--blue) 57.12% 71.4%,
+    var(--green) 71.4% 85.68%,
+    var(--teal) 85.68% 100%
+  );
+}
+
+.section--rounded {
+  border-radius: clamp(2rem, 5vw, 4rem);
+}
+
+section[id],
+div[id] {
+  scroll-margin-top: calc(var(--header-h) + 16px);
+}
+
+/* ------------------------------------------------------------
+   Tipografía de sección
+   ------------------------------------------------------------ */
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--plum);
+  background: var(--plum-soft);
+  border-radius: var(--radius-pill);
+  padding: 0.4rem 0.9rem 0.4rem 0.75rem;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--coral);
+  box-shadow: 0 0 0 3px rgba(239, 75, 69, 0.2);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4.4vw, 3.15rem);
+  margin-top: 1.1rem;
+}
+
+.section-title .highlight {
+  position: relative;
+  z-index: 0;
+  color: var(--coral);
+  white-space: nowrap;
+}
+
+.section-title .highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0.02em;
+  height: 0.22em;
+  border-radius: var(--radius-pill);
+  background: var(--coral-soft);
+  z-index: -1;
+}
+
+.section-title .highlight--plum {
+  color: var(--plum);
+}
+.section-title .highlight--plum::after {
+  background: var(--plum-soft);
+}
+.section-title .highlight--sky {
+  color: #1f8cc9;
+}
+.section-title .highlight--sky::after {
+  background: var(--sky-soft);
+}
+.section-title .highlight--blue {
+  color: var(--blue);
+}
+.section-title .highlight--blue::after {
+  background: var(--blue-soft);
+}
+.section-title .highlight--green {
+  color: var(--green);
+}
+.section-title .highlight--green::after {
+  background: var(--green-soft);
+}
+.section-title .highlight--teal {
+  color: #0a8b7f;
+}
+.section-title .highlight--teal::after {
+  background: var(--teal-soft);
+}
+.section-title .highlight--sun {
+  color: #b98200;
+}
+.section-title .highlight--sun::after {
+  background: var(--sun-soft);
+}
+
+.lead {
+  font-size: clamp(1.02rem, 1.5vw, 1.15rem);
+  color: var(--ink-soft);
+  max-width: 62ch;
+}
+
+.section-head {
+  display: grid;
+  gap: 1.15rem;
+  max-width: 720px;
+}
+
+.section-head--center {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+/* ------------------------------------------------------------
+   Botones
+   ------------------------------------------------------------ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.95rem 1.65rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.98rem;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.22s ease,
+    background-color 0.22s ease,
+    color 0.22s ease;
+  will-change: transform;
+}
+
+.btn svg {
+  width: 1.15em;
+  height: 1.15em;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+.btn--primary {
+  background: #d63a35;
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(214, 58, 53, 0.35);
+}
+
+.btn--primary:hover {
+  background: #bf2f2b;
+  box-shadow: 0 18px 34px rgba(214, 58, 53, 0.42);
+}
+
+.btn--ink {
+  background: var(--ink);
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(43, 37, 64, 0.28);
+}
+
+.btn--ink:hover {
+  background: #3b3456;
+}
+
+.btn--sun {
+  background: var(--sun);
+  color: var(--ink);
+  box-shadow: 0 12px 26px rgba(255, 197, 61, 0.4);
+}
+
+.btn--sun:hover {
+  background: #ffd15c;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 2px rgba(43, 37, 64, 0.14);
+}
+
+.btn--ghost:hover {
+  background: var(--white);
+  box-shadow:
+    inset 0 0 0 2px rgba(43, 37, 64, 0.14),
+    var(--shadow-sm);
+}
+
+.btn--light {
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+/* ------------------------------------------------------------
+   Piezas reutilizables
+   ------------------------------------------------------------ */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--ink-soft);
+}
+
+.chip svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  color: var(--teal);
+  flex: none;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(43, 37, 64, 0.06);
+}
+
+.icon-bubble {
+  display: grid;
+  place-items: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 18px;
+  background: var(--sun-soft);
+  color: var(--ink);
+  flex: none;
+}
+
+.icon-bubble svg {
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.icon-bubble--coral {
+  background: var(--coral-soft);
+  color: #c8372a;
+}
+.icon-bubble--teal {
+  background: var(--teal-soft);
+  color: #0a8b7f;
+}
+.icon-bubble--sky {
+  background: var(--sky-soft);
+  color: #1c7fb8;
+}
+.icon-bubble--plum {
+  background: var(--plum-soft);
+  color: var(--plum);
+}
+.icon-bubble--sun {
+  background: var(--sun-soft);
+  color: #a06d00;
+}
+.icon-bubble--blue {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+.icon-bubble--green {
+  background: var(--green-soft);
+  color: #157a44;
+}
+
+/* Divisor ondulado */
+.wave {
+  display: block;
+  width: 100%;
+  height: clamp(40px, 6vw, 80px);
+  color: var(--white);
+}
+
+/* ------------------------------------------------------------
+   Animación de aparición (directiva appReveal)
+   ------------------------------------------------------------ */
+
+[appReveal] {
+  opacity: 0;
+  transform: translateY(26px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[appReveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.6;
+  }
+  70% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ------------------------------------------------------------
+   Utilidades
+   ------------------------------------------------------------ */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 999;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--radius-sm);
+  background: var(--ink);
+  color: #fff;
+  font-weight: 800;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* ------------------------------------------------------------
+   Accesibilidad: movimiento reducido
+   ------------------------------------------------------------ */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  [appReveal] {
+    opacity: 1;
+    transform: none;
+  }
+}

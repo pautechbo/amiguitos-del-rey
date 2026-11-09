@@ -1,0 +1,99 @@
+<footer class="footer">
+  <div class="footer__glow" aria-hidden="true"></div>
+
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <app-logo variant="light" />
+      <p class="footer__text">
+        Unidad educativa de educación inicial donde las niñas y niños crecen seguros, juegan con
+        propósito y aprenden felices.
+      </p>
+
+      <ul class="footer__socials">
+        @for (social of socials; track social.name) {
+          <li>
+            @if (social.url) {
+              <a
+                [href]="social.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                [attr.aria-label]="social.name + ': ' + social.handle"
+              >
+                <app-icon [name]="social.icon" [size]="16" />
+                {{ social.name }}
+              </a>
+            } @else {
+              <span [attr.title]="social.name + ' · Próximamente'">
+                <app-icon [name]="social.icon" [size]="16" />
+                {{ social.name }}
+              </span>
+            }
+          </li>
+        }
+      </ul>
+    </div>
+
+    <nav class="footer__col" aria-label="Enlaces del sitio">
+      <h3 class="footer__title">Explora</h3>
+      <ul class="footer__list">
+        @for (item of nav; track item.href) {
+          <li><a [href]="item.href">{{ item.label }}</a></li>
+        }
+      </ul>
+    </nav>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Programas</h3>
+      <ul class="footer__list">
+        @for (program of programs; track program.id) {
+          <li>
+            <a href="#programas">{{ program.name }} <span>{{ program.age }}</span></a>
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Visítanos</h3>
+      <ul class="footer__list footer__list--contact">
+        <li>
+          <app-icon name="pin" [size]="18" />
+          <span>
+            {{ site.address }}
+            <span class="footer__address-detail">{{ site.addressDetail }}</span>
+            <a
+              class="footer__map-link"
+              [href]="site.mapsUrl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Ver en Google Maps
+              <app-icon name="arrow-up-right" [size]="13" />
+            </a>
+          </span>
+        </li>
+        <li>
+          <app-icon name="clock" [size]="18" />
+          <span>{{ site.hours }}</span>
+        </li>
+        <li>
+          <app-icon name="phone" [size]="18" />
+          <a [href]="site.phoneHref">{{ site.phone }}</a>
+        </li>
+        <li>
+          <app-icon name="mail" [size]="18" />
+          <a [href]="'mailto:' + site.email">{{ site.email }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer__bottom">
+    <p>© {{ year }} {{ site.legalName }}. Todos los derechos reservados.</p>
+    <p class="footer__made">
+      Hecho con cariño para la primera infancia
+      <span aria-hidden="true">·</span>
+      <a href="#inicio">Volver arriba ↑</a>
+    </p>
+  </div>
+</footer>

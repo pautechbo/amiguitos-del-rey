@@ -1,0 +1,139 @@
+.team {
+  background: var(--white);
+}
+
+.team__head {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.team__lead {
+  padding-bottom: 0.4rem;
+}
+
+.team__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2.2vw, 1.5rem);
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.member {
+  --accent: var(--plum);
+  --accent-soft: var(--plum-soft);
+  --accent-text: var(--plum-text);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.9rem 1.3rem 1.6rem;
+  border-radius: var(--radius);
+  background: var(--cream);
+  border: 1px solid rgba(43, 37, 64, 0.05);
+  text-align: center;
+  transition:
+    transform 0.28s ease,
+    box-shadow 0.28s ease,
+    background-color 0.28s ease;
+}
+
+.member:hover {
+  transform: translateY(-6px);
+  background: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.member--coral {
+  --accent: var(--coral);
+  --accent-soft: var(--coral-soft);
+  --accent-text: var(--coral-text);
+}
+.member--teal {
+  --accent: var(--teal);
+  --accent-soft: var(--teal-soft);
+  --accent-text: var(--teal-text);
+}
+.member--sky {
+  --accent: var(--sky);
+  --accent-soft: var(--sky-soft);
+  --accent-text: var(--sky-text);
+}
+.member--plum {
+  --accent: var(--plum);
+  --accent-soft: var(--plum-soft);
+  --accent-text: var(--plum-text);
+}
+.member--sun {
+  --accent: #b98200;
+  --accent-soft: var(--sun-soft);
+  --accent-text: var(--sun-text);
+}
+.member--blue {
+  --accent: var(--blue);
+  --accent-soft: var(--blue-soft);
+  --accent-text: var(--blue-text);
+}
+.member--green {
+  --accent: var(--green);
+  --accent-soft: var(--green-soft);
+  --accent-text: var(--green-text);
+}
+
+.member__avatar {
+  display: grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.85), transparent 45%),
+    var(--accent-soft);
+  box-shadow: 0 0 0 6px var(--white), 0 12px 24px rgba(43, 37, 64, 0.1);
+  font-family: var(--font-head);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.member__name {
+  margin-top: 1.1rem;
+  font-size: 1.1rem;
+}
+
+.member__role {
+  margin-top: 0.35rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background: var(--accent-soft);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+}
+
+.member__bio {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 1000px) {
+  .team__head {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .team__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .team__grid {
+    grid-template-columns: 1fr;
+  }
+}

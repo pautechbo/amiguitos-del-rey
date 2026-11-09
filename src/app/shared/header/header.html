@@ -1,0 +1,65 @@
+<header class="header" [class.is-scrolled]="scrolled()" [class.is-open]="menuOpen()">
+  <div class="container header__inner">
+    <a class="header__brand" href="#inicio" (click)="closeMenu()">
+      <app-logo />
+    </a>
+
+    <nav class="header__nav" aria-label="Navegación principal">
+      @for (item of nav; track item.href) {
+        <a
+          class="header__link"
+          [href]="item.href"
+          [class.is-active]="active() === item.href"
+          (click)="closeMenu()"
+        >
+          {{ item.label }}
+        </a>
+      }
+    </nav>
+
+    <div class="header__actions">
+      <a class="header__phone" [href]="site.phoneHref">
+        <app-icon name="phone" [size]="17" />
+        {{ site.phone }}
+      </a>
+
+      <a class="btn btn--primary header__cta" href="#contacto" (click)="closeMenu()">
+        Agendar visita
+        <app-icon name="arrow-right" [size]="18" />
+      </a>
+
+      <button
+        class="header__burger"
+        type="button"
+        [attr.aria-expanded]="menuOpen()"
+        [attr.aria-label]="menuOpen() ? 'Cerrar menú' : 'Abrir menú'"
+        aria-controls="menu-movil"
+        (click)="toggleMenu()"
+      >
+        <app-icon [name]="menuOpen() ? 'close' : 'menu'" [size]="24" />
+      </button>
+    </div>
+  </div>
+
+  <div class="header__mobile" id="menu-movil" [class.is-open]="menuOpen()">
+    <nav class="header__mobile-nav" aria-label="Navegación móvil">
+      @for (item of nav; track item.href) {
+        <a class="header__mobile-link" [href]="item.href" (click)="closeMenu()">
+          {{ item.label }}
+          <app-icon name="arrow-up-right" [size]="18" />
+        </a>
+      }
+    </nav>
+
+    <div class="header__mobile-foot">
+      <a class="btn btn--primary btn--block" href="#contacto" (click)="closeMenu()">
+        Agendar una visita
+        <app-icon name="calendar" [size]="18" />
+      </a>
+      <a class="header__mobile-phone" [href]="site.phoneHref">
+        <app-icon name="phone" [size]="18" />
+        {{ site.phone }}
+      </a>
+    </div>
+  </div>
+</header>

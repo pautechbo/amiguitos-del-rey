@@ -1,0 +1,67 @@
+<section class="section about" id="nosotros">
+  <div class="container about__inner">
+    <div class="about__art" appReveal>
+      <div class="about__frame about__frame--main">
+        <img
+          src="/img/about.svg"
+          alt="Maestra leyendo un cuento a un grupo de niñas y niños"
+          width="520"
+          height="520"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="about__frame about__frame--small">
+        <img
+          src="/img/gallery-garden.svg"
+          alt="Niños regando plantas en el huerto del colegio"
+          width="300"
+          height="225"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="about__badge">
+        <strong>18</strong>
+        <span>años creciendo juntos</span>
+      </div>
+    </div>
+
+    <div class="about__content" appReveal style="--reveal-delay: 120ms">
+      <span class="eyebrow">Nosotros</span>
+      <h2 class="section-title">
+        Un segundo hogar para los <span class="highlight highlight--plum">primeros pasos</span>
+      </h2>
+
+      <p class="lead about__lead">
+        Somos una unidad educativa de educación inicial que cree en la infancia como una etapa
+        propia, no como una preparación apurada para la siguiente.
+      </p>
+
+      <p class="about__text">
+        Durante 18 años hemos acompañado a familias de la ciudad con una propuesta sencilla y
+        exigente a la vez: pocos niños por aula, docentes que conocen a cada uno por su nombre y una
+        jornada donde el juego tiene intención pedagógica.
+      </p>
+
+      <div class="about__pillars">
+        @for (pillar of pillars; track pillar.title) {
+          <article class="about__pillar">
+            <span [class]="'icon-bubble icon-bubble--' + pillar.theme">
+              <app-icon [name]="pillar.icon" [size]="22" />
+            </span>
+            <div>
+              <h3>{{ pillar.title }}</h3>
+              <p>{{ pillar.text }}</p>
+            </div>
+          </article>
+        }
+      </div>
+
+      <a class="btn btn--ink about__cta" href="#programas">
+        Conoce nuestros programas
+        <app-icon name="arrow-right" [size]="18" />
+      </a>
+    </div>
+  </div>
+</section>

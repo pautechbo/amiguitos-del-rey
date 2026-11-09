@@ -1,0 +1,49 @@
+<section class="section admissions" id="admisiones">
+  <div class="container">
+    <div class="admissions__card">
+      <div class="admissions__content" appReveal>
+        <span class="eyebrow">Admisiones 2027</span>
+        <h2 class="section-title">Cuatro pasos para <span class="highlight highlight--blue">ser parte</span></h2>
+        <p class="lead admissions__lead">
+          El proceso es simple y sin compromiso. Lo importante es que conozcas el espacio y que tu
+          hija o hijo se sienta a gusto.
+        </p>
+
+        <ol class="admissions__steps">
+          @for (step of steps; track step.number) {
+            <li class="admissions__step">
+              <span class="admissions__num">{{ step.number }}</span>
+              <div>
+                <h3>{{ step.title }}</h3>
+                <p>{{ step.text }}</p>
+              </div>
+            </li>
+          }
+        </ol>
+      </div>
+
+      <aside class="admissions__aside" appReveal style="--reveal-delay: 120ms">
+        <h3 class="admissions__aside-title">Todo lo que incluye</h3>
+
+        <ul class="admissions__list">
+          @for (item of includes; track item) {
+            <li>
+              <app-icon name="check" [size]="17" />
+              {{ item }}
+            </li>
+          }
+        </ul>
+
+        <a class="btn btn--sun btn--block" href="#contacto">
+          Reservar una visita
+          <app-icon name="calendar" [size]="18" />
+        </a>
+
+        <p class="admissions__note">
+          <app-icon name="sparkles" [size]="16" />
+          Cupos limitados: 18 niñas y niños por nivel.
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,38 @@
+<section class="section faq" id="preguntas">
+  <div class="container faq__inner">
+    <div class="faq__intro" appReveal>
+      <span class="eyebrow">Preguntas frecuentes</span>
+      <h2 class="section-title">Resolvemos tus <span class="highlight highlight--plum">dudas</span></h2>
+      <p class="lead faq__lead">
+        Si no encuentras lo que buscas, escríbenos: respondemos personalmente, no con respuestas
+        automáticas.
+      </p>
+      <a class="btn btn--ghost" href="#contacto">
+        Hacer una pregunta
+        <app-icon name="arrow-right" [size]="18" />
+      </a>
+    </div>
+
+    <div class="faq__list">
+      @for (faq of faqs; track faq.question; let i = $index) {
+        <div class="faq__item" [class.is-open]="open() === i" appReveal [style.--reveal-delay]="i * 50 + 'ms'">
+          <button
+            class="faq__question"
+            type="button"
+            [attr.aria-expanded]="open() === i"
+            (click)="toggle(i)"
+          >
+            <span>{{ faq.question }}</span>
+            <span class="faq__chevron" aria-hidden="true">
+              <app-icon name="chevron-down" [size]="20" />
+            </span>
+          </button>
+
+          <div class="faq__answer">
+            <p>{{ faq.answer }}</p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+<section class="section team" id="equipo">
+  <div class="container">
+    <div class="team__head" appReveal>
+      <div>
+        <span class="eyebrow">Equipo</span>
+        <h2 class="section-title">Personas que <span class="highlight highlight--green">se quedan</span> en la memoria</h2>
+      </div>
+      <p class="lead team__lead">
+        Docentes tituladas, con formación continua y una vocación que se nota en el trato diario. La
+        rotación de nuestro equipo es mínima: los niños crecen con las mismas caras.
+      </p>
+    </div>
+
+    <div class="team__grid">
+      @for (member of team; track member.name; let i = $index) {
+        <article
+          [class]="'member member--' + member.theme"
+          appReveal
+          [style.--reveal-delay]="i * 80 + 'ms'"
+        >
+          <span class="member__avatar" aria-hidden="true">{{ member.initials }}</span>
+          <h3 class="member__name">{{ member.name }}</h3>
+          <span class="member__role">{{ member.role }}</span>
+          <p class="member__bio">{{ member.bio }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

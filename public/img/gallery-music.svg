@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
+  <rect width="400" height="300" fill="#F1EBFB" />
+  <circle cx="330" cy="66" r="36" fill="#E6DDF6" />
+
+  <!-- Xilófono -->
+  <g transform="translate(120 150)">
+    <rect x="-8" y="34" width="196" height="14" rx="7" fill="#C9A97F" />
+    <g>
+      <rect x="0" y="0" width="34" height="34" rx="8" fill="#FF6B5B" />
+      <rect x="40" y="4" width="34" height="30" rx="8" fill="#FFC53D" />
+      <rect x="80" y="8" width="34" height="26" rx="8" fill="#2EC4B6" />
+      <rect x="120" y="12" width="34" height="22" rx="8" fill="#5FB8F5" />
+      <rect x="160" y="16" width="26" height="18" rx="8" fill="#6B4E9B" />
+    </g>
+    <circle cx="30" cy="56" r="9" fill="#FFC53D" />
+    <circle cx="150" cy="56" r="9" fill="#FF6B5B" />
+    <path d="M30 56L150 56" stroke="#B08D63" stroke-width="5" stroke-linecap="round" />
+  </g>
+
+  <!-- Tambor -->
+  <g transform="translate(322 206)">
+    <ellipse cx="0" cy="0" rx="46" ry="18" fill="#FFF6EC" stroke="#E0C9AE" stroke-width="5" />
+    <path d="M-46 0v26a46 18 0 0 0 92 0V0" fill="#FF8A5B" />
+    <path d="M-46 0v26a46 18 0 0 0 92 0V0" fill="none" stroke="#E86A45" stroke-width="4" />
+    <path d="M-30 6l14 34M0 10v36M30 6l-14 34" stroke="#FFFFFF" stroke-width="3" opacity=".7" />
+  </g>
+
+  <!-- Notas -->
+  <g fill="#6B4E9B">
+    <g transform="translate(84 74)">
+      <ellipse cx="0" cy="0" rx="11" ry="8" transform="rotate(-18)" />
+      <path d="M9-2V-44l26-8v12L15-33v31z" />
+    </g>
+    <g transform="translate(228 52)" opacity=".7">
+      <ellipse cx="0" cy="0" rx="9" ry="6.5" transform="rotate(-18)" />
+      <path d="M7-2v-34l21-6v10L13-27v25z" />
+    </g>
+  </g>
+
+  <g fill="#FFC53D">
+    <path d="M300 96l3 7.5 7.5 3-7.5 3-3 7.5-3-7.5-7.5-3 7.5-3z" />
+  </g>
+
+  <path d="M32 270h336" stroke="#DED2F3" stroke-width="8" stroke-linecap="round" />
+</svg>

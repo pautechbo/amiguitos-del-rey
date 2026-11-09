@@ -1,0 +1,48 @@
+<section class="section method" id="metodologia">
+  <div class="method__glow method__glow--one" aria-hidden="true"></div>
+  <div class="method__glow method__glow--two" aria-hidden="true"></div>
+  <div class="method__glow method__glow--three" aria-hidden="true"></div>
+
+  <div class="container">
+    <div class="method__head">
+      <div appReveal>
+        <span class="eyebrow eyebrow--light">Metodología</span>
+        <h2 class="section-title method__title">
+          Aprender jugando,<br />
+          <span class="method__accent">en serio</span>
+        </h2>
+      </div>
+
+      <p class="method__intro" appReveal style="--reveal-delay: 120ms">
+        No improvisamos: cada rincón, cada material y cada momento de la jornada tiene una intención
+        pedagógica. Así se ve nuestro enfoque en el aula.
+      </p>
+    </div>
+
+    <div class="method__grid">
+      @for (item of method; track item.number; let i = $index) {
+        <article
+          [class]="'method__card method__card--' + item.theme"
+          appReveal
+          [style.--reveal-delay]="(i % 3) * 90 + 'ms'"
+        >
+          <div class="method__card-top">
+            <span class="method__number">{{ item.number }}</span>
+            <span class="method__icon">
+              <app-icon [name]="item.icon" [size]="22" />
+            </span>
+          </div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+      }
+    </div>
+
+    <blockquote class="method__quote" appReveal>
+      <app-icon name="sparkles" [size]="26" />
+      <p>
+        “El juego es el trabajo de la infancia: ahí ensayan la vida antes de vivirla.”
+      </p>
+    </blockquote>
+  </div>
+</section>

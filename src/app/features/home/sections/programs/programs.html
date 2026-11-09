@@ -1,0 +1,58 @@
+<section class="section programs" id="programas">
+  <div class="container">
+    <div class="section-head section-head--center" appReveal>
+      <span class="eyebrow">Programas</span>
+      <h2 class="section-title">Un nivel para cada <span class="highlight highlight--blue">edad</span></h2>
+      <p class="lead">
+        Cuatro niveles de educación inicial, desde el primer año, y talleres por la tarde. Grupos
+        pequeños, dos adultos por aula y una jornada pensada para la infancia.
+      </p>
+    </div>
+
+    <div class="programs__grid">
+      @for (program of programs; track program.id; let i = $index) {
+        <article
+          [class]="'program program--' + program.theme"
+          appReveal
+          [style.--reveal-delay]="i * 90 + 'ms'"
+        >
+          <div class="program__top">
+            <span class="program__age">{{ program.age }}</span>
+            <span class="program__icon">
+              <app-icon [name]="iconFor(program)" [size]="26" />
+            </span>
+          </div>
+
+          <h3 class="program__name">{{ program.name }}</h3>
+          <p class="program__tagline">{{ program.tagline }}</p>
+          <p class="program__desc">{{ program.description }}</p>
+
+          <ul class="program__list">
+            @for (highlight of program.highlights; track highlight) {
+              <li>
+                <app-icon name="check" [size]="16" />
+                {{ highlight }}
+              </li>
+            }
+          </ul>
+
+          <div class="program__meta">
+            <span><app-icon name="users" [size]="16" /> {{ program.ratio }}</span>
+            <span><app-icon name="clock" [size]="16" /> {{ program.schedule }}</span>
+          </div>
+
+          <a class="program__link" href="#contacto">
+            Solicitar información
+            <app-icon name="arrow-right" [size]="16" />
+          </a>
+
+          @if (i === 0) {
+            <span class="program__watermark" aria-hidden="true">
+              <app-icon name="heart" [size]="150" />
+            </span>
+          }
+        </article>
+      }
+    </div>
+  </div>
+</section>

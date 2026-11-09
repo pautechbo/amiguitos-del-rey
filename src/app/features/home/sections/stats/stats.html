@@ -1,0 +1,12 @@
+<section class="stats" aria-label="Amiguitos del Rey en números">
+  <div class="container">
+    <dl class="stats__card" appReveal>
+      @for (stat of stats; track stat.label) {
+        <div class="stats__item">
+          <dt>{{ stat.value }}</dt>
+          <dd>{{ stat.label }}</dd>
+        </div>
+      }
+    </dl>
+  </div>
+</section>

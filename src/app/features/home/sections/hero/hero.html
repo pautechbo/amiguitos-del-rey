@@ -1,0 +1,104 @@
+<section class="hero" id="inicio">
+  <div class="hero__bg" aria-hidden="true">
+    <span class="hero__blob hero__blob--sun"></span>
+    <span class="hero__blob hero__blob--teal"></span>
+    <span class="hero__blob hero__blob--coral"></span>
+    <span class="hero__blob hero__blob--plum"></span>
+    <span class="hero__blob hero__blob--blue"></span>
+    <span class="hero__doodle hero__doodle--one">✦</span>
+    <span class="hero__doodle hero__doodle--two">✧</span>
+    <span class="hero__doodle hero__doodle--three">✦</span>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="hero__badge">
+        <span class="hero__dot" aria-hidden="true"></span>
+        Inscripciones {{ year }} abiertas
+      </p>
+
+      <h1 class="hero__title">
+        Crecer jugando,<br />
+        <span class="hero__title-accent">aprender felices</span>
+      </h1>
+
+      <p class="lead hero__lead">
+        En <strong>Amiguitos del Rey</strong> acompañamos a niñas y niños de 1 a 6 años con una
+        educación inicial cálida, segura y llena de descubrimientos.
+      </p>
+
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#contacto">
+          Agenda una visita
+          <app-icon name="calendar" [size]="19" />
+        </a>
+        <a class="btn btn--ghost" href="#programas">
+          Conocer los programas
+          <app-icon name="arrow-right" [size]="19" />
+        </a>
+      </div>
+
+      <ul class="hero__chips">
+        @for (chip of chips; track chip.label) {
+          <li class="chip">
+            <app-icon [name]="chip.icon" [size]="18" />
+            {{ chip.label }}
+          </li>
+        }
+      </ul>
+
+      <div class="hero__trust">
+        <ul class="hero__avatars" aria-hidden="true">
+          @for (avatar of avatars; track avatar.initials) {
+            <li [class]="'hero__avatar hero__avatar--' + avatar.theme">{{ avatar.initials }}</li>
+          }
+        </ul>
+        <p>
+          <strong>240+ familias</strong>
+          <span>nos eligen cada año</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="hero__art">
+      <div class="hero__art-frame">
+        <img
+          src="/img/hero.svg"
+          alt="Ilustración de tres niñas y niños jugando con bloques y globos"
+          width="600"
+          height="560"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="hero__float hero__float--a">
+        <span class="icon-bubble icon-bubble--teal"><app-icon name="users" [size]="22" /></span>
+        <div>
+          <strong>8:1</strong>
+          <span>niños por educadora</span>
+        </div>
+      </div>
+
+      <div class="hero__float hero__float--b">
+        <span class="icon-bubble icon-bubble--sun"><app-icon name="sun" [size]="22" /></span>
+        <div>
+          <strong>18 años</strong>
+          <span>creciendo juntos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__marquee" aria-hidden="true">
+    <div class="hero__track">
+      @for (round of [1, 2]; track round) {
+        @for (value of values; track value) {
+          <span class="hero__value">
+            {{ value }}
+            <app-icon name="sparkles" [size]="16" />
+          </span>
+        }
+      }
+    </div>
+  </div>
+</section>

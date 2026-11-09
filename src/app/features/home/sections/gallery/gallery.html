@@ -1,0 +1,62 @@
+<section class="section gallery" id="galeria">
+  <div class="container">
+    <div class="section-head section-head--center" appReveal>
+      <span class="eyebrow">Galería</span>
+      <h2 class="section-title">Espacios pensados para <span class="highlight highlight--plum">descubrir</span></h2>
+      <p class="lead">
+        Aulas luminosas, materiales al alcance de los niños y un patio que invita a moverse. Un
+        recorrido por los lugares donde transcurre la jornada.
+      </p>
+    </div>
+
+    <div class="gallery__grid">
+      @for (item of items; track item.title; let i = $index) {
+        <button
+          class="gallery__item"
+          type="button"
+          appReveal
+          [style.--reveal-delay]="i * 60 + 'ms'"
+          [attr.aria-label]="'Ampliar imagen: ' + item.title"
+          (click)="open(i)"
+        >
+          <img
+            [src]="item.image"
+            [alt]="item.title"
+            width="400"
+            height="300"
+            loading="lazy"
+          />
+          <span class="gallery__caption">
+            <strong>{{ item.title }}</strong>
+            <span>{{ item.caption }}</span>
+          </span>
+          <span class="gallery__zoom" aria-hidden="true">
+            <app-icon name="arrow-up-right" [size]="18" />
+          </span>
+        </button>
+      }
+    </div>
+  </div>
+
+  @if (current(); as item) {
+    <div
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      [attr.aria-label]="item.title"
+      (click)="close()"
+    >
+      <figure class="lightbox__figure" (click)="$event.stopPropagation()">
+        <img [src]="item.image" [alt]="item.title" width="800" height="600" />
+        <figcaption>
+          <strong>{{ item.title }}</strong>
+          <span>{{ item.caption }}</span>
+        </figcaption>
+      </figure>
+
+      <button class="lightbox__close" type="button" aria-label="Cerrar imagen" (click)="close()">
+        <app-icon name="close" [size]="22" />
+      </button>
+    </div>
+  }
+</section>
