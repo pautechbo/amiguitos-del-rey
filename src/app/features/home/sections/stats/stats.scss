@@ -13,7 +13,7 @@
   background: var(--white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow);
-  border: 1px solid rgba(43, 37, 64, 0.05);
+  border: 1px solid rgba(0, 30, 92, 0.05);
   overflow: hidden;
 }
 
@@ -26,13 +26,9 @@
   height: 4px;
   background: linear-gradient(
     90deg,
-    var(--coral) 0 14.28%,
-    var(--plum) 14.28% 28.56%,
-    var(--sky) 28.56% 42.84%,
-    var(--sun) 42.84% 57.12%,
-    var(--blue) 57.12% 71.4%,
-    var(--green) 71.4% 85.68%,
-    var(--teal) 85.68% 100%
+    var(--navy) 0 33.33%,
+    var(--green) 33.33% 66.66%,
+    var(--gold) 66.66% 100%
   );
 }
 
@@ -53,7 +49,7 @@
   top: 18%;
   bottom: 18%;
   width: 1px;
-  background: rgba(43, 37, 64, 0.1);
+  background: rgba(0, 30, 92, 0.1);
 }
 
 .stats__item dt {
@@ -62,19 +58,19 @@
   font-weight: 800;
   line-height: 1;
   letter-spacing: -0.03em;
-  color: var(--coral);
+  color: var(--green-deep);
 }
 
 .stats__item:nth-child(2) dt {
-  color: var(--blue);
+  color: var(--navy);
 }
 
 .stats__item:nth-child(3) dt {
-  color: var(--green);
+  color: var(--gold-deep);
 }
 
 .stats__item:nth-child(4) dt {
-  color: var(--plum);
+  color: var(--sky);
 }
 
 .stats__item dd {
@@ -108,6 +104,6 @@
     top: 15%;
     bottom: 15%;
     width: 1px;
-    background: rgba(43, 37, 64, 0.1);
+    background: rgba(0, 30, 92, 0.1);
   }
 }

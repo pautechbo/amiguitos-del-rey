@@ -37,7 +37,7 @@ src/
 │   │   └── sections/              # hero, stats, about, programs, methodology, day,
 │   │                              # gallery, testimonials, team, admissions, faq, contact, social
 │   ├── shared/                    # header, footer, logo, icon, directiva reveal
-│   ├── app.ts / app.html          # Shell: header + router-outlet + footer + WhatsApp
+│   ├── app.ts / app.html          # Shell: header + router-outlet + footer + CTA móvil
 │   └── app.routes.ts
 ├── styles.scss                    # Tokens de diseño, utilidades y estilos globales
 └── index.html                     # SEO, fuentes, JSON-LD
@@ -45,6 +45,25 @@ public/
 ├── favicon.svg
 └── img/                           # Ilustraciones SVG propias
 ```
+
+## Identidad visual
+
+La landing usa una paleta de tres colores sobre crema:
+
+| Token | Color | Uso |
+| --- | --- | --- |
+| `--navy` | `#001E5C` | Textos, fondos oscuros, navegación |
+| `--green` | `#4EED28` | Acentos, iconos y detalles |
+| `--green-deep` | `#2B7A0B` | CTA y texto verde accesible |
+| `--gold` | `#F5B301` | Corona, estrellas y acentos dorados |
+| `--cream` | `#FFFAF2` | Fondo principal |
+
+Las ilustraciones SVG de `public/img/` están recoloreadas con esta paleta. El logo y el favicon
+usan corona dorada sobre fondo navy.
+
+Mejoras incluidas: hero simplificado, franjas navy → verde → dorado, sección de redes compacta,
+barra fija de llamada/WhatsApp en móvil, carruseles de galería y equipo en móvil, y enlaces de
+programas alineados al pie de cada tarjeta.
 
 ## Personalización rápida
 

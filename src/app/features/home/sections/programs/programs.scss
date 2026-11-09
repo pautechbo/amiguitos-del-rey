@@ -16,8 +16,8 @@
 }
 
 .program {
-  --accent: var(--coral);
-  --accent-soft: var(--coral-soft);
+  --accent: var(--green-deep);
+  --accent-soft: var(--green-soft);
 
   position: relative;
   display: flex;
@@ -25,7 +25,7 @@
   padding: clamp(1.5rem, 3vw, 2rem);
   border-radius: var(--radius);
   background: var(--white);
-  border: 1px solid rgba(43, 37, 64, 0.07);
+  border: 1px solid rgba(0, 30, 92, 0.07);
   box-shadow: var(--shadow-sm);
   transition:
     transform 0.28s cubic-bezier(0.34, 1.4, 0.64, 1),
@@ -52,41 +52,41 @@
 }
 
 .program {
-  --accent-text: var(--coral-text);
+  --accent-text: var(--green-text);
 }
 
 .program--coral {
-  --accent: var(--coral);
-  --accent-soft: var(--coral-soft);
-  --accent-text: var(--coral-text);
+  --accent: var(--green-deep);
+  --accent-soft: var(--green-soft);
+  --accent-text: var(--green-text);
 }
 .program--teal {
-  --accent: var(--teal);
-  --accent-soft: var(--teal-soft);
-  --accent-text: var(--teal-text);
+  --accent: var(--green-deep);
+  --accent-soft: var(--green-soft);
+  --accent-text: var(--green-text);
 }
 .program--sky {
-  --accent: var(--sky);
-  --accent-soft: var(--sky-soft);
-  --accent-text: var(--sky-text);
+  --accent: var(--gold-deep);
+  --accent-soft: var(--gold-soft);
+  --accent-text: var(--gold-deep);
 }
 .program--plum {
-  --accent: var(--plum);
-  --accent-soft: var(--plum-soft);
-  --accent-text: var(--plum-text);
+  --accent: var(--navy);
+  --accent-soft: var(--navy-soft);
+  --accent-text: var(--navy);
 }
 .program--sun {
-  --accent: #b98200;
-  --accent-soft: var(--sun-soft);
-  --accent-text: var(--sun-text);
+  --accent: var(--gold-deep);
+  --accent-soft: var(--gold-soft);
+  --accent-text: var(--gold-deep);
 }
 .program--blue {
-  --accent: var(--blue);
-  --accent-soft: var(--blue-soft);
-  --accent-text: var(--blue-text);
+  --accent: var(--sky);
+  --accent-soft: var(--navy-soft);
+  --accent-text: var(--sky-text);
 }
 .program--green {
-  --accent: var(--green);
+  --accent: #3fbf24;
   --accent-soft: var(--green-soft);
   --accent-text: var(--green-text);
 }
@@ -191,7 +191,7 @@
   gap: 0.5rem 1.2rem;
   margin-top: 1.3rem;
   padding-top: 1.1rem;
-  border-top: 1px dashed rgba(43, 37, 64, 0.12);
+  border-top: 1px dashed rgba(0, 30, 92, 0.12);
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--ink-soft);
@@ -211,7 +211,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  margin-top: 1.2rem;
+  margin-top: auto;
+  padding-top: 1.2rem;
   font-size: 0.9rem;
   font-weight: 800;
   color: var(--ink);

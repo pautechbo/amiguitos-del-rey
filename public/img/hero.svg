@@ -2,16 +2,16 @@
   <title id="heroTitle">Tres niñas y niños jugando con bloques y un globo</title>
   <defs>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#EAF6FF" />
-      <stop offset="1" stop-color="#FFF3E2" />
+      <stop offset="0" stop-color="#EEF2F9" />
+      <stop offset="1" stop-color="#FFF8E8" />
     </linearGradient>
     <linearGradient id="hill" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#D3EDDD" />
-      <stop offset="1" stop-color="#A9DCC4" />
+      <stop offset="0" stop-color="#DDF7D3" />
+      <stop offset="1" stop-color="#A8E38F" />
     </linearGradient>
     <linearGradient id="balloon" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FF9C8C" />
-      <stop offset="1" stop-color="#FF6B5B" />
+      <stop offset="0" stop-color="#7BE05A" />
+      <stop offset="1" stop-color="#2B7A0B" />
     </linearGradient>
   </defs>
 
@@ -20,19 +20,19 @@
   <circle cx="300" cy="282" r="252" fill="none" stroke="#FFFFFF" stroke-width="10" opacity=".6" />
 
   <!-- Sol -->
-  <g stroke="#FFC53D" stroke-width="7" stroke-linecap="round">
+  <g stroke="#F5B301" stroke-width="7" stroke-linecap="round">
     <path d="M462 62v-14M462 190v14M398 126h-14M526 126h14" />
     <path d="M417 81l-10-10M507 171l10 10M417 171l-10 10M507 81l10-10" />
   </g>
-  <circle cx="462" cy="126" r="42" fill="#FFC53D" />
+  <circle cx="462" cy="126" r="42" fill="#F5B301" />
   <circle cx="449" cy="113" r="12" fill="#FFD977" opacity=".8" />
 
   <!-- Arcoíris -->
   <g fill="none" stroke-linecap="round" stroke-width="13">
-    <path d="M62 252a88 88 0 0 1 176 0" stroke="#FF6B5B" />
-    <path d="M78 252a72 72 0 0 1 144 0" stroke="#FFC53D" />
-    <path d="M94 252a56 56 0 0 1 112 0" stroke="#2EC4B6" />
-    <path d="M110 252a40 40 0 0 1 80 0" stroke="#5FB8F5" />
+    <path d="M62 252a88 88 0 0 1 176 0" stroke="#2B7A0B" />
+    <path d="M78 252a72 72 0 0 1 144 0" stroke="#F5B301" />
+    <path d="M94 252a56 56 0 0 1 112 0" stroke="#3FBF24" />
+    <path d="M110 252a40 40 0 0 1 80 0" stroke="#3B5F9E" />
   </g>
 
   <!-- Nubes -->
@@ -44,33 +44,33 @@
 
   <!-- Colinas -->
   <path d="M50 470c40-72 122-100 194-72 40 16 72 16 112-6 54-28 142-16 206 74v66H50z" fill="url(#hill)" />
-  <path d="M50 500c70-40 150-44 210-20 60 24 130 22 180-4 30-15 60-14 94 6v50H50z" fill="#8FD0B4" opacity=".5" />
+  <path d="M50 500c70-40 150-44 210-20 60 24 130 22 180-4 30-15 60-14 94 6v50H50z" fill="#A8E38F" opacity=".5" />
 
   <!-- Flores -->
   <g>
-    <circle cx="126" cy="470" r="6" fill="#FF6B5B" />
-    <circle cx="126" cy="470" r="2.4" fill="#FFF3E2" />
-    <circle cx="470" cy="482" r="5" fill="#FFC53D" />
-    <circle cx="470" cy="482" r="2" fill="#FFF3E2" />
-    <circle cx="508" cy="466" r="4.5" fill="#6B4E9B" />
-    <circle cx="508" cy="466" r="1.8" fill="#FFF3E2" />
+    <circle cx="126" cy="470" r="6" fill="#2B7A0B" />
+    <circle cx="126" cy="470" r="2.4" fill="#FFF8E8" />
+    <circle cx="470" cy="482" r="5" fill="#F5B301" />
+    <circle cx="470" cy="482" r="2" fill="#FFF8E8" />
+    <circle cx="508" cy="466" r="4.5" fill="#001E5C" />
+    <circle cx="508" cy="466" r="1.8" fill="#FFF8E8" />
   </g>
 
   <!-- Globo -->
   <path d="M436 396c18-34 40-62 36-104" fill="none" stroke="#B9A8A0" stroke-width="2.4" />
   <ellipse cx="470" cy="252" rx="30" ry="36" fill="url(#balloon)" />
   <ellipse cx="460" cy="239" rx="8" ry="12" fill="#FFFFFF" opacity=".35" />
-  <path d="M466 288l4 9 5-9z" fill="#E4574A" />
+  <path d="M466 288l4 9 5-9z" fill="#1F5C07" />
 
   <!-- Niña 1 (izquierda) -->
   <g>
-    <rect x="186" y="458" width="20" height="46" rx="10" fill="#4B4A6A" />
-    <rect x="210" y="458" width="20" height="46" rx="10" fill="#4B4A6A" />
-    <ellipse cx="196" cy="506" rx="16" ry="8" fill="#3A3956" />
-    <ellipse cx="220" cy="506" rx="16" ry="8" fill="#3A3956" />
-    <rect x="168" y="378" width="72" height="90" rx="30" fill="#FF7A6B" />
-    <rect x="150" y="392" width="21" height="62" rx="10.5" fill="#FF9A8C" transform="rotate(-12 160 423)" />
-    <rect x="238" y="392" width="21" height="62" rx="10.5" fill="#FF9A8C" transform="rotate(12 248 423)" />
+    <rect x="186" y="458" width="20" height="46" rx="10" fill="#001E5C" />
+    <rect x="210" y="458" width="20" height="46" rx="10" fill="#001E5C" />
+    <ellipse cx="196" cy="506" rx="16" ry="8" fill="#00123A" />
+    <ellipse cx="220" cy="506" rx="16" ry="8" fill="#00123A" />
+    <rect x="168" y="378" width="72" height="90" rx="30" fill="#4EED28" />
+    <rect x="150" y="392" width="21" height="62" rx="10.5" fill="#7BE05A" transform="rotate(-12 160 423)" />
+    <rect x="238" y="392" width="21" height="62" rx="10.5" fill="#7BE05A" transform="rotate(12 248 423)" />
     <circle cx="204" cy="350" r="33" fill="#F3C6A5" />
     <path d="M171 344c0-20 15-34 33-34s33 14 33 34c-9-7-19-10-33-10s-24 3-33 10z" fill="#4A3228" />
     <circle cx="204" cy="314" r="11" fill="#4A3228" />
@@ -83,13 +83,13 @@
 
   <!-- Niño 2 (centro) -->
   <g>
-    <rect x="282" y="458" width="21" height="48" rx="10" fill="#3F3D56" />
-    <rect x="308" y="458" width="21" height="48" rx="10" fill="#3F3D56" />
-    <ellipse cx="292" cy="508" rx="16" ry="8" fill="#2F2D45" />
-    <ellipse cx="319" cy="508" rx="16" ry="8" fill="#2F2D45" />
-    <rect x="262" y="352" width="78" height="112" rx="32" fill="#2EC4B6" />
-    <rect x="244" y="368" width="21" height="70" rx="10.5" fill="#5BD6C8" transform="rotate(-9 254 403)" />
-    <rect x="337" y="368" width="21" height="70" rx="10.5" fill="#5BD6C8" transform="rotate(9 347 403)" />
+    <rect x="282" y="458" width="21" height="48" rx="10" fill="#001E5C" />
+    <rect x="308" y="458" width="21" height="48" rx="10" fill="#001E5C" />
+    <ellipse cx="292" cy="508" rx="16" ry="8" fill="#00123A" />
+    <ellipse cx="319" cy="508" rx="16" ry="8" fill="#00123A" />
+    <rect x="262" y="352" width="78" height="112" rx="32" fill="#3FBF24" />
+    <rect x="244" y="368" width="21" height="70" rx="10.5" fill="#7BE05A" transform="rotate(-9 254 403)" />
+    <rect x="337" y="368" width="21" height="70" rx="10.5" fill="#7BE05A" transform="rotate(9 347 403)" />
     <circle cx="301" cy="318" r="35" fill="#E8B48C" />
     <g fill="#2F2A24">
       <circle cx="278" cy="302" r="13" />
@@ -107,11 +107,11 @@
 
   <!-- Niña 3 (derecha) -->
   <g>
-    <rect x="376" y="458" width="19" height="44" rx="9.5" fill="#6B4E9B" />
-    <rect x="399" y="458" width="19" height="44" rx="9.5" fill="#6B4E9B" />
-    <ellipse cx="386" cy="504" rx="15" ry="7.5" fill="#5A4084" />
-    <ellipse cx="408" cy="504" rx="15" ry="7.5" fill="#5A4084" />
-    <rect x="358" y="382" width="70" height="84" rx="28" fill="#FFC53D" />
+    <rect x="376" y="458" width="19" height="44" rx="9.5" fill="#001E5C" />
+    <rect x="399" y="458" width="19" height="44" rx="9.5" fill="#001E5C" />
+    <ellipse cx="386" cy="504" rx="15" ry="7.5" fill="#00123A" />
+    <ellipse cx="408" cy="504" rx="15" ry="7.5" fill="#00123A" />
+    <rect x="358" y="382" width="70" height="84" rx="28" fill="#F5B301" />
     <rect x="340" y="396" width="20" height="58" rx="10" fill="#FFD466" transform="rotate(-10 350 425)" />
     <rect x="424" y="376" width="20" height="56" rx="10" fill="#FFD466" transform="rotate(26 434 404)" />
     <circle cx="392" cy="352" r="32" fill="#F7D3B5" />
@@ -125,9 +125,9 @@
 
   <!-- Bloques -->
   <g>
-    <rect x="96" y="452" width="44" height="44" rx="12" fill="#5FB8F5" />
-    <rect x="142" y="452" width="44" height="44" rx="12" fill="#FFC53D" />
-    <rect x="119" y="408" width="44" height="44" rx="12" fill="#FF6B5B" />
+    <rect x="96" y="452" width="44" height="44" rx="12" fill="#3B5F9E" />
+    <rect x="142" y="452" width="44" height="44" rx="12" fill="#F5B301" />
+    <rect x="119" y="408" width="44" height="44" rx="12" fill="#2B7A0B" />
     <g font-family="Nunito, Arial, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF" text-anchor="middle">
       <text x="118" y="482">A</text>
       <text x="164" y="482">B</text>
@@ -137,18 +137,18 @@
 
   <!-- Planta -->
   <g>
-    <path d="M520 470v-34" stroke="#2E8B57" stroke-width="4" stroke-linecap="round" />
-    <ellipse cx="508" cy="440" rx="14" ry="8" fill="#3FA96A" transform="rotate(-24 508 440)" />
-    <ellipse cx="532" cy="444" rx="13" ry="7" fill="#57C081" transform="rotate(22 532 444)" />
-    <ellipse cx="520" cy="428" rx="9" ry="12" fill="#4BB377" />
+    <path d="M520 470v-34" stroke="#2B7A0B" stroke-width="4" stroke-linecap="round" />
+    <ellipse cx="508" cy="440" rx="14" ry="8" fill="#2B7A0B" transform="rotate(-24 508 440)" />
+    <ellipse cx="532" cy="444" rx="13" ry="7" fill="#4EED28" transform="rotate(22 532 444)" />
+    <ellipse cx="520" cy="428" rx="9" ry="12" fill="#4EED28" />
   </g>
 
   <!-- Destellos -->
-  <g fill="#FFC53D">
+  <g fill="#F5B301">
     <path d="M330 176l3.4 8.6 8.6 3.4-8.6 3.4-3.4 8.6-3.4-8.6-8.6-3.4 8.6-3.4z" />
     <path d="M118 330l2.6 6.4 6.4 2.6-6.4 2.6-2.6 6.4-2.6-6.4-6.4-2.6 6.4-2.6z" opacity=".8" />
   </g>
-  <g fill="#FF6B5B">
+  <g fill="#2B7A0B">
     <path d="M540 220l2.2 5.6 5.6 2.2-5.6 2.2-2.2 5.6-2.2-5.6-5.6-2.2 5.6-2.2z" opacity=".85" />
   </g>
 </svg>

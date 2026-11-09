@@ -1,43 +1,45 @@
 <section class="section social" id="redes">
   <div class="container">
-    <div class="section-head section-head--center" appReveal>
-      <span class="eyebrow">Redes sociales</span>
-      <h2 class="section-title">Muy pronto, más <span class="highlight highlight--plum">Amiguitos</span></h2>
-      <p class="lead">
-        Estamos preparando nuestros canales para compartir el día a día del colegio. Este espacio
-        queda reservado para cuando las cuentas estén listas.
-      </p>
+    <div class="social__panel" appReveal>
+      <div class="social__intro">
+        <span class="eyebrow eyebrow--light">Redes sociales</span>
+        <h2 class="social__title">Muy pronto, más <span>Amiguitos</span></h2>
+        <p>
+          Estamos preparando nuestros canales para compartir el día a día del colegio. Este espacio
+          queda reservado para cuando las cuentas estén listas.
+        </p>
+        <p class="social__cta">
+          ¿Quieres que te avisemos? <a href="#contacto">Escríbenos</a>.
+        </p>
+      </div>
+
+      <ul class="social__list">
+        @for (item of socials; track item.name) {
+          <li [class]="'social__item social__item--' + item.theme">
+            <span class="social__icon">
+              <app-icon [name]="item.icon" [size]="22" />
+            </span>
+            <span class="social__text">
+              <strong>{{ item.name }}</strong>
+              <span>{{ item.handle }}</span>
+            </span>
+
+            @if (item.url) {
+              <a
+                class="social__link"
+                [href]="item.url"
+                target="_blank"
+                rel="noopener noreferrer"
+                [attr.aria-label]="'Ver ' + item.name"
+              >
+                <app-icon name="arrow-up-right" [size]="15" />
+              </a>
+            } @else {
+              <span class="social__soon">Pronto</span>
+            }
+          </li>
+        }
+      </ul>
     </div>
-
-    <div class="social__grid">
-      @for (item of socials; track item.name; let i = $index) {
-        <article
-          [class]="'social__card social__card--' + item.theme"
-          appReveal
-          [style.--reveal-delay]="i * 80 + 'ms'"
-        >
-          <span class="social__icon">
-            <app-icon [name]="item.icon" [size]="26" />
-          </span>
-          <h3 class="social__name">{{ item.name }}</h3>
-          <p class="social__handle">{{ item.handle }}</p>
-          <p class="social__note">{{ item.note }}</p>
-
-          @if (item.url) {
-            <a class="social__link" [href]="item.url" target="_blank" rel="noopener noreferrer">
-              Ver perfil
-              <app-icon name="arrow-up-right" [size]="15" />
-            </a>
-          } @else {
-            <span class="social__soon">Próximamente</span>
-          }
-        </article>
-      }
-    </div>
-
-    <p class="social__cta" appReveal>
-      ¿Quieres que te avisemos cuando estén listas?
-      <a href="#contacto">Escríbenos</a>.
-    </p>
   </div>
 </section>

@@ -4,39 +4,47 @@
 
 :root {
   /* Paleta */
-  --cream: #fff7ee;
-  --cream-deep: #fdedda;
+  --cream: #fffaf2;
+  --cream-deep: #f5eddf;
   --white: #ffffff;
-  --ink: #2b2540;
-  --ink-soft: #5d5675;
-  --ink-faint: #8b85a0;
+  --ink: #001e5c;
+  --ink-soft: #41506f;
+  --ink-faint: #66738c;
 
-  /* Siete colores de la identidad: rojo, morado, celeste, amarillo, azul, verde y verde agua */
-  --coral: #ef4b45; /* rojo */
-  --coral-soft: #ffd9d6;
-  --plum: #7a4bd6; /* morado */
-  --plum-soft: #e8ddff;
-  --sky: #55b9f3; /* celeste */
-  --sky-soft: #d8efff;
-  --sun: #ffc531; /* amarillo */
-  --sun-soft: #ffeab0;
-  --blue: #2f6fed; /* azul */
-  --blue-soft: #dce7ff;
-  --green: #1fa45c; /* verde */
-  --green-soft: #d6f2e1;
-  --teal: #0fb3a3; /* verde agua */
-  --teal-soft: #cff3ee;
-  --mint: #eaf6ef;
-  --lavender: #f3edff;
+  /* Identidad: azul marino, verde y dorado */
+  --navy: #001e5c;
+  --navy-soft: #e8eef9;
+  --green: #4eed28;
+  --green-deep: #2b7a0b;
+  --green-soft: #e2fad9;
+  --gold: #f5b301;
+  --gold-deep: #7a5500;
+  --gold-soft: #fff1c7;
+
+  /* Tokens semánticos (se mantienen para no tocar todos los componentes) */
+  --coral: var(--green-deep);
+  --coral-soft: var(--green-soft);
+  --plum: var(--navy);
+  --plum-soft: var(--navy-soft);
+  --sky: #2f5da8;
+  --sky-soft: var(--navy-soft);
+  --sun: var(--gold);
+  --sun-soft: var(--gold-soft);
+  --blue: var(--navy);
+  --blue-soft: var(--navy-soft);
+  --teal: var(--green-deep);
+  --teal-soft: var(--green-soft);
+  --mint: #edfbea;
+  --lavender: #e9eff9;
 
   /* Variantes oscuras para texto sobre fondos claros (contraste AA) */
-  --coral-text: #b02a21;
-  --plum-text: #5a32a8;
-  --sky-text: #12628f;
-  --sun-text: #6f4d00;
-  --blue-text: #1a47a8;
-  --green-text: #0e5c33;
-  --teal-text: #086b62;
+  --coral-text: #1f5c07;
+  --plum-text: #001e5c;
+  --sky-text: #1c3f7a;
+  --sun-text: #7a5500;
+  --blue-text: #001e5c;
+  --green-text: #1f5c07;
+  --teal-text: #1f5c07;
 
   /* Formas */
   --radius-sm: 14px;
@@ -45,10 +53,10 @@
   --radius-pill: 999px;
 
   /* Sombras */
-  --shadow-sm: 0 6px 18px rgba(43, 37, 64, 0.06);
-  --shadow: 0 18px 44px rgba(43, 37, 64, 0.1);
-  --shadow-lg: 0 32px 72px rgba(43, 37, 64, 0.16);
-  --ring: 0 0 0 4px rgba(255, 197, 61, 0.45);
+  --shadow-sm: 0 6px 18px rgba(0, 30, 92, 0.06);
+  --shadow: 0 18px 44px rgba(0, 30, 92, 0.1);
+  --shadow-lg: 0 32px 72px rgba(0, 30, 92, 0.16);
+  --ring: 0 0 0 4px rgba(245, 179, 1, 0.4);
 
   /* Tipografía */
   --font-head: 'Baloo 2', 'Trebuchet MS', system-ui, sans-serif;
@@ -177,17 +185,13 @@ select {
   background: var(--lavender);
 }
 
-/* Franja arcoíris de la identidad */
+/* Franja de la identidad: azul marino, verde y dorado */
 .rainbow-line {
   background: linear-gradient(
     90deg,
-    var(--coral) 0 14.28%,
-    var(--plum) 14.28% 28.56%,
-    var(--sky) 28.56% 42.84%,
-    var(--sun) 42.84% 57.12%,
-    var(--blue) 57.12% 71.4%,
-    var(--green) 71.4% 85.68%,
-    var(--teal) 85.68% 100%
+    var(--navy) 0 33.33%,
+    var(--green) 33.33% 66.66%,
+    var(--gold) 66.66% 100%
   );
 }
 
@@ -213,8 +217,8 @@ div[id] {
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--plum);
-  background: var(--plum-soft);
+  color: var(--navy);
+  background: var(--navy-soft);
   border-radius: var(--radius-pill);
   padding: 0.4rem 0.9rem 0.4rem 0.75rem;
 }
@@ -224,8 +228,8 @@ div[id] {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--coral);
-  box-shadow: 0 0 0 3px rgba(239, 75, 69, 0.2);
+  background: var(--green);
+  box-shadow: 0 0 0 3px rgba(78, 237, 40, 0.22);
 }
 
 .section-title {
@@ -236,7 +240,7 @@ div[id] {
 .section-title .highlight {
   position: relative;
   z-index: 0;
-  color: var(--coral);
+  color: var(--green-deep);
   white-space: nowrap;
 }
 
@@ -248,45 +252,45 @@ div[id] {
   bottom: 0.02em;
   height: 0.22em;
   border-radius: var(--radius-pill);
-  background: var(--coral-soft);
+  background: var(--green-soft);
   z-index: -1;
 }
 
 .section-title .highlight--plum {
-  color: var(--plum);
+  color: var(--navy);
 }
 .section-title .highlight--plum::after {
-  background: var(--plum-soft);
+  background: var(--navy-soft);
 }
 .section-title .highlight--sky {
-  color: #1f8cc9;
+  color: var(--sky-text);
 }
 .section-title .highlight--sky::after {
-  background: var(--sky-soft);
+  background: var(--navy-soft);
 }
 .section-title .highlight--blue {
-  color: var(--blue);
+  color: var(--navy);
 }
 .section-title .highlight--blue::after {
-  background: var(--blue-soft);
+  background: var(--navy-soft);
 }
 .section-title .highlight--green {
-  color: var(--green);
+  color: var(--green-deep);
 }
 .section-title .highlight--green::after {
   background: var(--green-soft);
 }
 .section-title .highlight--teal {
-  color: #0a8b7f;
+  color: var(--green-deep);
 }
 .section-title .highlight--teal::after {
-  background: var(--teal-soft);
+  background: var(--green-soft);
 }
 .section-title .highlight--sun {
-  color: #b98200;
+  color: var(--gold-deep);
 }
 .section-title .highlight--sun::after {
-  background: var(--sun-soft);
+  background: var(--gold-soft);
 }
 
 .lead {
@@ -345,46 +349,46 @@ div[id] {
 }
 
 .btn--primary {
-  background: #d63a35;
+  background: var(--green-deep);
   color: #fff;
-  box-shadow: 0 12px 26px rgba(214, 58, 53, 0.35);
+  box-shadow: 0 12px 26px rgba(43, 122, 11, 0.32);
 }
 
 .btn--primary:hover {
-  background: #bf2f2b;
-  box-shadow: 0 18px 34px rgba(214, 58, 53, 0.42);
+  background: #1f5c07;
+  box-shadow: 0 18px 34px rgba(43, 122, 11, 0.4);
 }
 
 .btn--ink {
-  background: var(--ink);
+  background: var(--navy);
   color: #fff;
-  box-shadow: 0 12px 26px rgba(43, 37, 64, 0.28);
+  box-shadow: 0 12px 26px rgba(0, 30, 92, 0.28);
 }
 
 .btn--ink:hover {
-  background: #3b3456;
+  background: #0a2f7a;
 }
 
 .btn--sun {
-  background: var(--sun);
-  color: var(--ink);
-  box-shadow: 0 12px 26px rgba(255, 197, 61, 0.4);
+  background: var(--gold);
+  color: var(--navy);
+  box-shadow: 0 12px 26px rgba(245, 179, 1, 0.38);
 }
 
 .btn--sun:hover {
-  background: #ffd15c;
+  background: #ffc531;
 }
 
 .btn--ghost {
   background: transparent;
-  color: var(--ink);
-  box-shadow: inset 0 0 0 2px rgba(43, 37, 64, 0.14);
+  color: var(--navy);
+  box-shadow: inset 0 0 0 2px rgba(0, 30, 92, 0.14);
 }
 
 .btn--ghost:hover {
   background: var(--white);
   box-shadow:
-    inset 0 0 0 2px rgba(43, 37, 64, 0.14),
+    inset 0 0 0 2px rgba(0, 30, 92, 0.14),
     var(--shadow-sm);
 }
 
@@ -418,7 +422,7 @@ div[id] {
 .chip svg {
   width: 1.05rem;
   height: 1.05rem;
-  color: var(--teal);
+  color: var(--green-deep);
   flex: none;
 }
 
@@ -426,7 +430,7 @@ div[id] {
   background: var(--white);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(43, 37, 64, 0.06);
+  border: 1px solid rgba(0, 30, 92, 0.06);
 }
 
 .icon-bubble {
@@ -446,32 +450,32 @@ div[id] {
 }
 
 .icon-bubble--coral {
-  background: var(--coral-soft);
-  color: #c8372a;
+  background: var(--green-soft);
+  color: var(--green-deep);
 }
 .icon-bubble--teal {
-  background: var(--teal-soft);
-  color: #0a8b7f;
+  background: var(--green-soft);
+  color: var(--green-deep);
 }
 .icon-bubble--sky {
-  background: var(--sky-soft);
-  color: #1c7fb8;
+  background: var(--navy-soft);
+  color: var(--sky-text);
 }
 .icon-bubble--plum {
-  background: var(--plum-soft);
-  color: var(--plum);
+  background: var(--navy-soft);
+  color: var(--navy);
 }
 .icon-bubble--sun {
-  background: var(--sun-soft);
-  color: #a06d00;
+  background: var(--gold-soft);
+  color: var(--gold-deep);
 }
 .icon-bubble--blue {
-  background: var(--blue-soft);
-  color: var(--blue);
+  background: var(--navy-soft);
+  color: var(--navy);
 }
 .icon-bubble--green {
   background: var(--green-soft);
-  color: #157a44;
+  color: var(--green-deep);
 }
 
 /* Divisor ondulado */
@@ -578,6 +582,20 @@ body.no-scroll {
 
 .skip-link:focus {
   top: 1rem;
+}
+
+/* ------------------------------------------------------------
+   Ajustes móviles
+   ------------------------------------------------------------ */
+
+@media (max-width: 640px) {
+  .section {
+    padding-block: clamp(3rem, 9vw, 4rem);
+  }
+
+  .section-title {
+    font-size: clamp(1.85rem, 8.2vw, 2.5rem);
+  }
 }
 
 /* ------------------------------------------------------------

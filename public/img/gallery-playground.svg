@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
-  <rect width="400" height="300" fill="#E4F7F2" />
-  <circle cx="332" cy="62" r="34" fill="#FFC53D" />
+  <rect width="400" height="300" fill="#EDFBEA" />
+  <circle cx="332" cy="62" r="34" fill="#F5B301" />
   <g fill="#FFFFFF" opacity=".95">
     <ellipse cx="120" cy="62" rx="30" ry="17" />
     <ellipse cx="146" cy="68" rx="22" ry="13" />
@@ -8,12 +8,12 @@
 
   <!-- Tobogán -->
   <g transform="translate(96 100)">
-    <path d="M0 0v130" stroke="#6B4E9B" stroke-width="9" stroke-linecap="round" />
-    <path d="M0 0h44" stroke="#6B4E9B" stroke-width="9" stroke-linecap="round" />
-    <path d="M44 0v58c0 30 22 44 52 50" fill="none" stroke="#FF6B5B" stroke-width="14" stroke-linecap="round" />
-    <path d="M96 108l24 8" stroke="#FF6B5B" stroke-width="14" stroke-linecap="round" />
-    <rect x="-8" y="118" width="70" height="14" rx="7" fill="#2EC4B6" />
-    <path d="M0 40h44M0 72h44" stroke="#6B4E9B" stroke-width="6" stroke-linecap="round" />
+    <path d="M0 0v130" stroke="#001E5C" stroke-width="9" stroke-linecap="round" />
+    <path d="M0 0h44" stroke="#001E5C" stroke-width="9" stroke-linecap="round" />
+    <path d="M44 0v58c0 30 22 44 52 50" fill="none" stroke="#2B7A0B" stroke-width="14" stroke-linecap="round" />
+    <path d="M96 108l24 8" stroke="#2B7A0B" stroke-width="14" stroke-linecap="round" />
+    <rect x="-8" y="118" width="70" height="14" rx="7" fill="#3FBF24" />
+    <path d="M0 40h44M0 72h44" stroke="#001E5C" stroke-width="6" stroke-linecap="round" />
   </g>
 
   <!-- Columpio -->
@@ -21,12 +21,12 @@
     <path d="M0 0l56 130M112 0L56 130" stroke="#E8A87C" stroke-width="9" stroke-linecap="round" />
     <path d="M0 0h112" stroke="#E8A87C" stroke-width="9" stroke-linecap="round" />
     <path d="M28 0v74M84 0v74" stroke="#B08D63" stroke-width="4" />
-    <rect x="16" y="72" width="80" height="14" rx="7" fill="#FFC53D" />
+    <rect x="16" y="72" width="80" height="14" rx="7" fill="#F5B301" />
   </g>
 
   <!-- Pasto -->
-  <path d="M0 244c70-18 140-14 210-4 60 8 130 8 190-4v64H0z" fill="#B9E6D6" />
-  <g fill="#8FD0B4">
+  <path d="M0 244c70-18 140-14 210-4 60 8 130 8 190-4v64H0z" fill="#C8F2B8" />
+  <g fill="#A8E38F">
     <circle cx="60" cy="252" r="7" />
     <circle cx="180" cy="258" r="6" />
     <circle cx="330" cy="250" r="7" />
@@ -34,12 +34,12 @@
 
   <!-- Pelota -->
   <g transform="translate(196 236)">
-    <circle cx="0" cy="0" r="22" fill="#FF8A5B" />
-    <path d="M-22 0a22 22 0 0 1 44 0" fill="#FFC53D" />
+    <circle cx="0" cy="0" r="22" fill="#F5B301" />
+    <path d="M-22 0a22 22 0 0 1 44 0" fill="#F5B301" />
     <circle cx="-6" cy="-8" r="5" fill="#FFFFFF" opacity=".5" />
   </g>
 
-  <g fill="#FFC53D">
+  <g fill="#F5B301">
     <path d="M36 160l2.8 7 7 2.8-7 2.8-2.8 7-2.8-7-7-2.8 7-2.8z" />
   </g>
 </svg>

@@ -132,9 +132,9 @@ media(id, album_id, url, caption, consent, uploaded_by)
    real de alumnos y docentes.
 2. **Niveles y edades exactas** que manejan y horarios por nivel.
 3. **Precios:** matrícula, pensión, transporte, talleres. ¿Se publican o solo se dan en visita?
-4. **Identidad visual:** ¿tienen logo y colores oficiales? Hoy la paleta juega con los siete
-   colores pedidos (rojo, morado, celeste, amarillo, azul, verde y verde agua) y el logo sigue
-   siendo provisional (corona).
+4. **Identidad visual:** ya aplicamos azul marino (`#001E5C`), verde (`#4EED28`) y dorado
+   (`#F5B301`) sobre crema. Falta confirmar si existe un logo oficial; por ahora la corona es
+   provisional.
 5. **Fotos reales:** la galería hoy es ilustración vectorial. Con fotos autorizadas sube
    mucho la conversión; hay que gestionar consentimiento de imagen.
 6. **Normativa:** ¿qué exige el Ministerio de Educación para boletines y registros?

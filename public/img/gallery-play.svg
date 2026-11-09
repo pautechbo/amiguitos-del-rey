@@ -1,13 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
-  <rect width="400" height="300" fill="#FFF6DA" />
-  <circle cx="72" cy="66" r="34" fill="#FFE9A8" />
+  <rect width="400" height="300" fill="#FFF8E8" />
+  <circle cx="72" cy="66" r="34" fill="#FFF0C2" />
 
   <!-- Torre de bloques -->
   <g transform="translate(118 176)">
-    <rect x="0" y="42" width="58" height="58" rx="12" fill="#5FB8F5" />
-    <rect x="62" y="42" width="58" height="58" rx="12" fill="#FFC53D" />
-    <rect x="30" y="-20" width="58" height="58" rx="12" fill="#FF6B5B" />
-    <rect x="31" y="-82" width="56" height="56" rx="12" fill="#2EC4B6" />
+    <rect x="0" y="42" width="58" height="58" rx="12" fill="#3B5F9E" />
+    <rect x="62" y="42" width="58" height="58" rx="12" fill="#F5B301" />
+    <rect x="30" y="-20" width="58" height="58" rx="12" fill="#2B7A0B" />
+    <rect x="31" y="-82" width="56" height="56" rx="12" fill="#3FBF24" />
     <g font-family="Nunito, Arial, sans-serif" font-size="26" font-weight="800" fill="#FFFFFF" text-anchor="middle">
       <text x="29" y="80">A</text>
       <text x="91" y="80">B</text>
@@ -18,25 +18,25 @@
 
   <!-- Carrito -->
   <g transform="translate(250 210)">
-    <path d="M0 0h18l10 34h62l12-24H34" fill="none" stroke="#FF6B5B" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
-    <rect x="34" y="16" width="42" height="20" rx="6" fill="#FFC53D" />
-    <circle cx="42" cy="44" r="9" fill="#5A4084" />
-    <circle cx="86" cy="44" r="9" fill="#5A4084" />
-    <circle cx="42" cy="44" r="3.5" fill="#FFF6DA" />
-    <circle cx="86" cy="44" r="3.5" fill="#FFF6DA" />
+    <path d="M0 0h18l10 34h62l12-24H34" fill="none" stroke="#2B7A0B" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" />
+    <rect x="34" y="16" width="42" height="20" rx="6" fill="#F5B301" />
+    <circle cx="42" cy="44" r="9" fill="#00123A" />
+    <circle cx="86" cy="44" r="9" fill="#00123A" />
+    <circle cx="42" cy="44" r="3.5" fill="#FFF8E8" />
+    <circle cx="86" cy="44" r="3.5" fill="#FFF8E8" />
   </g>
 
   <!-- Pelota -->
   <g transform="translate(340 108)">
-    <circle cx="0" cy="0" r="34" fill="#FF8A5B" />
-    <path d="M-34 0a34 34 0 0 1 68 0" fill="#FFC53D" />
-    <path d="M0-34a34 34 0 0 1 0 68" fill="#2EC4B6" opacity=".85" />
+    <circle cx="0" cy="0" r="34" fill="#F5B301" />
+    <path d="M-34 0a34 34 0 0 1 68 0" fill="#F5B301" />
+    <path d="M0-34a34 34 0 0 1 0 68" fill="#3FBF24" opacity=".85" />
     <circle cx="-10" cy="-12" r="8" fill="#FFFFFF" opacity=".5" />
   </g>
 
-  <g fill="#6B4E9B">
+  <g fill="#001E5C">
     <path d="M186 82l3 7.5 7.5 3-7.5 3-3 7.5-3-7.5-7.5-3 7.5-3z" opacity=".6" />
   </g>
 
-  <path d="M28 262h344" stroke="#F0DDA8" stroke-width="9" stroke-linecap="round" />
+  <path d="M28 262h344" stroke="#F7E3A8" stroke-width="9" stroke-linecap="round" />
 </svg>

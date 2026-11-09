@@ -6,6 +6,22 @@
 
 <app-footer />
 
+<div class="mobile-cta" aria-label="Contacto rápido">
+  <a class="mobile-cta__btn mobile-cta__btn--call" [href]="site.phoneHref">
+    <app-icon name="phone" [size]="18" />
+    Llamar
+  </a>
+  <a
+    class="mobile-cta__btn mobile-cta__btn--wa"
+    [href]="whatsappUrl"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <app-icon name="whatsapp" [size]="18" />
+    WhatsApp
+  </a>
+</div>
+
 <a
   class="whatsapp"
   [href]="whatsappUrl"

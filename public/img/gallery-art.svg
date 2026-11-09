@@ -1,41 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img">
-  <rect width="400" height="300" fill="#FFEDE9" />
-  <circle cx="80" cy="72" r="38" fill="#FFD9D3" />
+  <rect width="400" height="300" fill="#FFF8E8" />
+  <circle cx="80" cy="72" r="38" fill="#DFF9D6" />
 
   <!-- Caballete -->
   <g>
     <path d="M150 250l40-150 40 150" fill="none" stroke="#D8B48F" stroke-width="9" stroke-linecap="round" />
     <rect x="130" y="66" width="140" height="112" rx="10" fill="#FFFFFF" stroke="#E8D4BD" stroke-width="5" />
-    <rect x="146" y="82" width="108" height="80" rx="6" fill="#FFF6EC" />
-    <circle cx="182" cy="118" r="18" fill="#FFC53D" />
-    <path d="M146 162l32-34 26 26 18-18 32 34z" fill="#2EC4B6" opacity=".85" />
+    <rect x="146" y="82" width="108" height="80" rx="6" fill="#FFFBF4" />
+    <circle cx="182" cy="118" r="18" fill="#F5B301" />
+    <path d="M146 162l32-34 26 26 18-18 32 34z" fill="#3FBF24" opacity=".85" />
     <path d="M150 178h100" stroke="#E8D4BD" stroke-width="6" stroke-linecap="round" />
   </g>
 
   <!-- Paleta -->
   <g transform="translate(300 190) rotate(-12)">
     <path d="M0 0a44 44 0 1 0 44 44c0-6-5-10-11-10h-6a10 10 0 0 1 0-20h6A11 11 0 0 0 44 3 44 44 0 0 0 0 0z" fill="#FFFFFF" stroke="#E8D4BD" stroke-width="4" transform="translate(-22 -22)" />
-    <circle cx="-12" cy="-6" r="6" fill="#FF6B5B" />
-    <circle cx="6" cy="-14" r="6" fill="#FFC53D" />
-    <circle cx="18" cy="2" r="6" fill="#2EC4B6" />
-    <circle cx="-16" cy="14" r="6" fill="#6B4E9B" />
-    <circle cx="2" cy="20" r="6" fill="#5FB8F5" />
+    <circle cx="-12" cy="-6" r="6" fill="#2B7A0B" />
+    <circle cx="6" cy="-14" r="6" fill="#F5B301" />
+    <circle cx="18" cy="2" r="6" fill="#3FBF24" />
+    <circle cx="-16" cy="14" r="6" fill="#001E5C" />
+    <circle cx="2" cy="20" r="6" fill="#3B5F9E" />
   </g>
 
   <!-- Pincel -->
   <g transform="rotate(32 322 118)">
     <rect x="316" y="60" width="12" height="72" rx="6" fill="#E8A87C" />
     <rect x="314" y="128" width="16" height="14" rx="3" fill="#BFC7D5" />
-    <path d="M314 142h16l-8 26z" fill="#FF6B5B" />
+    <path d="M314 142h16l-8 26z" fill="#2B7A0B" />
   </g>
 
   <!-- Salpicaduras -->
   <g>
-    <circle cx="72" cy="196" r="9" fill="#FF6B5B" opacity=".7" />
-    <circle cx="92" cy="216" r="5" fill="#FFC53D" />
-    <circle cx="58" cy="220" r="6" fill="#2EC4B6" opacity=".8" />
-    <circle cx="356" cy="76" r="8" fill="#6B4E9B" opacity=".6" />
-    <circle cx="344" cy="250" r="6" fill="#FFC53D" />
+    <circle cx="72" cy="196" r="9" fill="#2B7A0B" opacity=".7" />
+    <circle cx="92" cy="216" r="5" fill="#F5B301" />
+    <circle cx="58" cy="220" r="6" fill="#3FBF24" opacity=".8" />
+    <circle cx="356" cy="76" r="8" fill="#001E5C" opacity=".6" />
+    <circle cx="344" cy="250" r="6" fill="#F5B301" />
   </g>
 
   <path d="M40 264h320" stroke="#F3C7BE" stroke-width="8" stroke-linecap="round" />

@@ -59,7 +59,7 @@
   bottom: 2.5rem;
   left: calc(var(--time-col) + var(--day-gap) + 11px);
   width: 2px;
-  background: linear-gradient(var(--coral-soft), rgba(255, 217, 211, 0.15));
+  background: linear-gradient(var(--green-soft), rgba(226, 250, 217, 0.1));
 }
 
 .day__item {
@@ -106,7 +106,7 @@
   border-radius: 18px;
   background: var(--white);
   box-shadow: var(--shadow-sm);
-  border: 1px solid rgba(43, 37, 64, 0.05);
+  border: 1px solid rgba(0, 30, 92, 0.05);
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;

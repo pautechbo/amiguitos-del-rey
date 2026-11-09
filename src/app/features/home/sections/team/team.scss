@@ -21,9 +21,9 @@
 }
 
 .member {
-  --accent: var(--plum);
-  --accent-soft: var(--plum-soft);
-  --accent-text: var(--plum-text);
+  --accent: var(--navy);
+  --accent-soft: var(--navy-soft);
+  --accent-text: var(--navy);
 
   display: flex;
   flex-direction: column;
@@ -31,7 +31,7 @@
   padding: 1.9rem 1.3rem 1.6rem;
   border-radius: var(--radius);
   background: var(--cream);
-  border: 1px solid rgba(43, 37, 64, 0.05);
+  border: 1px solid rgba(0, 30, 92, 0.05);
   text-align: center;
   transition:
     transform 0.28s ease,
@@ -46,37 +46,37 @@
 }
 
 .member--coral {
-  --accent: var(--coral);
-  --accent-soft: var(--coral-soft);
-  --accent-text: var(--coral-text);
+  --accent: var(--green-deep);
+  --accent-soft: var(--green-soft);
+  --accent-text: var(--green-text);
 }
 .member--teal {
-  --accent: var(--teal);
-  --accent-soft: var(--teal-soft);
-  --accent-text: var(--teal-text);
+  --accent: var(--green-deep);
+  --accent-soft: var(--green-soft);
+  --accent-text: var(--green-text);
 }
 .member--sky {
-  --accent: var(--sky);
-  --accent-soft: var(--sky-soft);
-  --accent-text: var(--sky-text);
+  --accent: var(--gold-deep);
+  --accent-soft: var(--gold-soft);
+  --accent-text: var(--gold-deep);
 }
 .member--plum {
-  --accent: var(--plum);
-  --accent-soft: var(--plum-soft);
-  --accent-text: var(--plum-text);
+  --accent: var(--navy);
+  --accent-soft: var(--navy-soft);
+  --accent-text: var(--navy);
 }
 .member--sun {
-  --accent: #b98200;
-  --accent-soft: var(--sun-soft);
-  --accent-text: var(--sun-text);
+  --accent: var(--gold-deep);
+  --accent-soft: var(--gold-soft);
+  --accent-text: var(--gold-deep);
 }
 .member--blue {
-  --accent: var(--blue);
-  --accent-soft: var(--blue-soft);
-  --accent-text: var(--blue-text);
+  --accent: var(--sky);
+  --accent-soft: var(--navy-soft);
+  --accent-text: var(--sky-text);
 }
 .member--green {
-  --accent: var(--green);
+  --accent: #3fbf24;
   --accent-soft: var(--green-soft);
   --accent-text: var(--green-text);
 }
@@ -90,7 +90,7 @@
   background:
     radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.85), transparent 45%),
     var(--accent-soft);
-  box-shadow: 0 0 0 6px var(--white), 0 12px 24px rgba(43, 37, 64, 0.1);
+  box-shadow: 0 0 0 6px var(--white), 0 12px 24px rgba(0, 30, 92, 0.1);
   font-family: var(--font-head);
   font-size: 1.5rem;
   font-weight: 800;
@@ -134,6 +134,22 @@
 
 @media (max-width: 540px) {
   .team__grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-inline: -20px;
+    padding-inline: 20px;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .team__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .member {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
   }
 }
